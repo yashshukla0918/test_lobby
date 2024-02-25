@@ -4,3 +4,24 @@ In the root folder: "npm init -y"
 Install packages: express dotenv cookie-parser bcryptjs mongoose socket.io jsonwebtoken nodemon -->
 
 <!-- Use command : "npm run server" to the application -->
+
+### Setup .env file
+
+```js
+PORT=...
+MONGO_DB_URI=...
+JWT_SECRET=...
+NODE_ENV=...
+```
+
+### Build the app
+
+```shell
+npm run build
+```
+
+### Start the app
+
+```shell
+npm start
+```
