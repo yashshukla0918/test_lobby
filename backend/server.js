@@ -2,6 +2,7 @@
 import dotenv from "dotenv";
 import express from "express";
 import authRoutes from "./routes/auth.routes.js";
+import messageRoutes from "./routes/message.routes.js";
 import connectToMongoDB from "./db/connectToMongoDB.js";
 
 
@@ -12,7 +13,7 @@ dotenv.config();
 
 app.use(express.json());  // to parse json
 app.use("/api/auth",authRoutes);    //Middlewares
-
+app.use("/api/messages",messageRoutes); 
 
 // app.get("/", (req,res)=>{
 //     //root route https:localhost:5000/
@@ -21,6 +22,6 @@ app.use("/api/auth",authRoutes);    //Middlewares
 
 app.listen (PORT,() => {
     connectToMongoDB() ;
-    console.log('Server is running on port ${PORT}');
+    console.log(`Server is running on port ${PORT}`);
 });
    
